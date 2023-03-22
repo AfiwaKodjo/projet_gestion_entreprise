@@ -4,6 +4,9 @@ import 'package:entreprise_essivi_sarl/favoritePage.dart';
 import 'package:entreprise_essivi_sarl/formPage.dart';
 import 'package:flutter/material.dart';
 
+import 'DashboardPage.dart';
+import 'commandePage.dart';
+import 'localisationPage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +21,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Miabé eau',
       debugShowCheckedModeBanner: false,
-      home: const HomePage(),
+      home: FormPage(),
     );
   }
 }
@@ -32,9 +35,17 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final items = const [
-    Icon(Icons.favorite, size: 40,color: Colors.white,),
-    Icon(Icons.home, size: 40, color: Colors.white,),
-    Icon(Icons.person, size: 40, color:Colors.white),
+    Icon(
+      Icons.favorite,
+      size: 40,
+      color: Colors.white,
+    ),
+    Icon(
+      Icons.home,
+      size: 40,
+      color: Colors.white,
+    ),
+    Icon(Icons.person, size: 40, color: Colors.white),
   ];
 
   int index = 1;
@@ -42,7 +53,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.deepPurple,
+        backgroundColor: Color.fromARGB(255, 68, 94, 163),
         bottomNavigationBar: CurvedNavigationBar(
           items: items,
           index: index,
@@ -56,7 +67,7 @@ class _HomePageState extends State<HomePage> {
           animationDuration: const Duration(milliseconds: 300),
         ),
         body: Container(
-          color: Colors.purple,
+          color: Color.fromARGB(255, 41, 19, 165),
           width: double.infinity,
           height: double.infinity,
           alignment: Alignment.center,
@@ -74,7 +85,7 @@ class _HomePageState extends State<HomePage> {
         widget = const AccueilPage();
         break;
       case 2:
-        widget = FormPage();
+        widget =  FormPage();
         break;
       default:
         widget = const AccueilPage();
@@ -82,6 +93,3 @@ class _HomePageState extends State<HomePage> {
     return widget;
   }
 }
-
-
-
