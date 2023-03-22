@@ -6,7 +6,7 @@ django-invoice system
 Clone the project 
 
 ```
-git clone https://github.com/afiwakodjo/django-invoice.git
+git clone https://github.com/AfiwaKodjo/projet_gestion_entreprise.git
 ```
 
 # Step 2
